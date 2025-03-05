@@ -1,0 +1,46 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+
+}
+
+.search_input {
+	display: flex;
+	align-items: center;
+	position: relative;
+	max-width: 100%;
+  margin: 2rem;
+}
+
+.search_input > input {
+	font-size: 18px;
+	padding: 5px 10px;
+	width: 100%;
+	padding-left: 35px;
+	outline: none;
+	background: #FFFFFF;
+	color: #000000;
+	border: 1px solid #C4D1EB;
+	border-radius: 15px;
+	box-shadow: 3px 3px 2px 0px #E2E2E2;
+	transition: .3s ease;
+}
+
+.search_input > input:focus {
+	background: #F2F2F2;
+	border: 1px solid #5A7EC7;
+	border-radius: 10px;
+}
+
+.search_input >input::placeholder {
+	color: #A0A0A0;
+}
+
+.search_input > .svg_icon {
+	position: absolute;
+	left: 10px;
+	fill: #525252;
+	width: 18px;
+	height: 18px;
+}

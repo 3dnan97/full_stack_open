@@ -1,0 +1,40 @@
+body{
+    background-color: rgb(161, 161, 161);
+    display: grid;
+    grid-template-columns: minmax(40%, 60%);
+    justify-content: center;
+    margin-top: 2rem;
+}
+
+.main{
+    padding-block: 2rem;
+    background-color: aliceblue;
+    text-align: center;
+    border-radius: 20px;
+}
+
+h2{
+    color: rgb(187, 28, 0);
+}
+
+table{
+    width: 80%;
+    margin-inline: auto;
+    text-align: left;
+}
+
+.error{
+    background-color: red;
+    font-size: 20px;
+    color: aliceblue;
+    margin-block: 1rem;
+    border: 2px solid rgb(10, 0, 120);
+    border-radius: 10px;
+}
+.success{
+    background-color: rgb(0, 209, 174);
+    font-size: 20px;
+    margin-block: 1rem;
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 10px;
+}
