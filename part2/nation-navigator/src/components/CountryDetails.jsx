@@ -32,34 +32,10 @@ const CountryDetails = ({ country }) => {
         }
       });
 
+
     return () => cancelToken.cancel(); // Cleanup function
   }, [country]);
 
-  /**
-   * Helper function to get appropriate weather emoji based on weather ID
-   * @param {number} weatherId - The ID representing the weather condition
-   * @returns The corresponding weather emoji
-   */
-  const getWeatherEmoji = (weatherId) => {
-    switch (true) {
-      case weatherId >= 200 && weatherId < 300:
-        return "⛈️";
-      case weatherId >= 400 && weatherId < 500:
-        return "🌧️";
-      case weatherId >= 500 && weatherId < 600:
-        return "🌧️";
-      case weatherId >= 600 && weatherId < 700:
-        return "🌨️";
-      case weatherId >= 700 && weatherId < 800:
-        return "☄️";
-      case weatherId == 800:
-        return "☀️";
-      case weatherId > 800:
-        return "☁️";
-      default:
-        return "";
-    }
-  };
 
   return (
     <div>
@@ -85,9 +61,10 @@ const CountryDetails = ({ country }) => {
         <div>
           <h2>Weather in {country.capital[0]}</h2>
           <div>Temperature {weather.main.temp.toFixed(2)} °C</div>
-          <h1 className="weather_emoji">
-            {getWeatherEmoji(weather.weather[0].id)}
-          </h1>
+          <img className="weather_emoji" 
+            src={`https://openweathermap.org/img/wn/${weather.weather[0].icon}@2x.png`} 
+            alt={`Weather icon of ${weather.weather[0].description}`}
+            />
           <div>Wind {weather.wind.speed} m/s</div>
           <hr />
         </div>
